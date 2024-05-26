@@ -1,0 +1,142 @@
+body {
+  background: url("./img/desk-white-black-header.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  font-family: monospace;
+}
+
+p {
+  text-align: center;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  position: absolute;
+  top: 40%;
+  color: #222;
+  text-align: center;
+  font-size: 2.4rem;
+  font-family: system-ui;
+  font-weight: 100;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  /* text-shadow: 2px 2px 40px #000000c7; */
+}
+
+h3:after {
+  content: attr(data-text);
+  position: absolute;
+  left: -3px;
+  text-shadow: black 1px 0px;
+  top: 0px;
+  background: transparent;
+  overflow: hidden;
+  animation: 1s linear 0s infinite alternate-reverse none running noiseAnim;
+  width: 100%;
+  filter: blur(1px);
+}
+
+@keyframes noiseAnim {
+  0% {
+    clip: rect(92px, 9999px, 87px, 0px);
+  }
+  10% {
+    clip: rect(74px, 9999px, 16px, 0px);
+  }
+  20% {
+    clip: rect(11px, 9999px, 78px, 0px);
+  }
+
+  30% {
+    clip: rect(14px, 9999px, 98px, 0px);
+  }
+
+  40% {
+    clip: rect(10px, 9999px, 25px, 0px);
+  }
+
+  50% {
+    clip: rect(98px, 9999px, 100px, 0px);
+  }
+
+  60% {
+    clip: rect(92px, 9999px, 4px, 0px);
+  }
+
+  70% {
+    clip: rect(96px, 9999px, 28px, 0px);
+  }
+
+  80% {
+    clip: rect(65px, 9999px, 9px, 0px);
+  }
+
+  90% {
+    clip: rect(50px, 9999px, 44px, 0px);
+  }
+
+  100% {
+    clip: rect(70px, 9999px, 95px, 0px);
+  }
+}
+
+.clock {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
+  margin-top: 10rem;
+  box-sizing: border-box;
+}
+
+.flip-clock-wrapper .flip {
+  margin-bottom: 3rem;
+}
+
+.flip-clock-divider .flip-clock-label,
+.flip-clock-divider.minutes .flip-clock-label,
+.flip-clock-divider.seconds .flip-clock-label {
+  font-weight: bold;
+  font-family: monospace;
+}
+
+@media (max-width: 768px) {
+  .flip-clock-divider {
+    width: 5px;
+  }
+
+  .flip-clock-wrapper ul {
+    width: 30px;
+  }
+
+  .clock {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .flip-clock-wrapper ul {
+    margin: 0px;
+  }
+
+  .flip-clock-divider .flip-clock-label,
+  .flip-clock-divider.minutes .flip-clock-label,
+  .flip-clock-divider.seconds .flip-clock-label {
+    right: -60px;
+    top: 100px;
+  }
+
+  h3 {
+    top: 40%;
+  }
+}

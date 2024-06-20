@@ -109,6 +109,34 @@ h3:after {
   font-family: monospace;
 }
 
+.social-wrapper {
+  list-style-type: none;
+  font-size: 1.5em;
+  text-align: center;
+  position: absolute;
+  display: ruby;
+  margin-top: 24rem;
+}
+
+
+li.social > a {
+  padding-left: 0em;
+  padding-right: 0.925em;
+  padding-top: 0.425em;
+  padding-bottom: 0.425em;
+  color: #727272;
+  text-decoration: none;
+  transition: all .5s ease-in-out;
+}
+
+[title]:hover{
+  color: rgb(75,75,75);
+}
+
+[center]{
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .flip-clock-divider {
     width: 5px;

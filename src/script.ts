@@ -7,7 +7,7 @@ const init = (): void => {
     const currentDate = new Date();
 
     // Target future date (local time in Australia/Sydney)
-    const targetDate = new Date("2024-09-30T00:00:00+10:00").getTime();
+    const targetDate = new Date("2024-10-01T00:00:00+10:00").getTime();
 
     // Calculate the difference in seconds between the future and current date
     const diff = Math.floor((targetDate - currentDate.getTime()) / 1000);
